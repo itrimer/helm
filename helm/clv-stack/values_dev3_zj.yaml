@@ -10,7 +10,7 @@ global:
     CONFIG_URL: disconf-svc.default.svc.cluster.local
     spring_profiles_active: prod
     LIB_CLASSPATH: -Xbootclasspath/a:.
-  root_domain: pg.clvpg.com
+  root_domain: pg.sanyangma.com
   product: true
 
 # 网关
