@@ -19,15 +19,15 @@ spec:
       containers:
       - name: iot
         imagePullPolicy: Always
-        image: hbaor.clvpg.com/clv/iot-nano:pro_0.9.3
+        image: habor.clvpg.com/clv/iot-nano:pro_0.9.7
         ports:
         - containerPort: 8080
           name: iot
         env:
           - name: MachineId
-            value: 1
+            value: "1"
           - name: domain
-            value: http://iot.sanyangma.com
+            value: "http://iot.sanyangma.com"
       nodeSelector:
         kubernetes.io/hostname: k8ss4
 
@@ -59,7 +59,7 @@ spec:
     - websecure
     - web
   routes:
-    - match: Host(`iot.clvpg.com`)
+    - match: Host(`iot.sanyangma.com`)
       kind: Rule
       services:
         - name: iot-svc

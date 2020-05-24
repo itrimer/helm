@@ -68,7 +68,7 @@ spec:
 
 ---
 apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
+kind: IngressRouteTCP
 metadata:
   name: emqx-mqtt-ingressroute
 spec:

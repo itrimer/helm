@@ -170,10 +170,10 @@ messagedispatch-biz:
     repository:  habor.clvpg.com/clv/messagedispatch-biz
     tag: dev3-latest
   env:
-    netty.port: 7799
+    netty.port: 7788
   service:
     type: ClusterIP
-    port: 7799
+    port: 7788
   nodeSelector:
     kubernetes.io/hostname: k8ss2
 
