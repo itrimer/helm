@@ -14,3 +14,4 @@ spec:
       port: {{ .Values.service.port }}
     middlewares:
     - name: {{ include "webpgh5.fullname" . }}-middleware
+  tls: {}

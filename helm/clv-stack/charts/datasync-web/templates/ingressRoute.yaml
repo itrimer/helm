@@ -12,3 +12,4 @@ spec:
     services:
     - name: {{ include "datasync-web.fullname" . }}-service
       port: 8080
+  tls: {}
