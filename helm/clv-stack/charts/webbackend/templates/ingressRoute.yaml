@@ -18,7 +18,7 @@ spec:
   - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/webbackend/`)
     kind: Rule
     services:
-    - name: {{ include "webbackend.fullname" . }}-service
-      port: {{ .Values.service.port }}
+      - name: {{ include "webbackend.fullname" . }}-service
+        port: {{ .Values.service.port }}
     middlewares:
-    - name: {{ include "webbackend.fullname" . }}-middleware``````````````````````
+      - name: {{ include "webbackend.fullname" . }}-middleware
