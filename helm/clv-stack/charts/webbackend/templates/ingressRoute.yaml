@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - websecure
     - web
-  - routes:
+  routes:
   - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/webbackend/`)
     kind: Rule
     services:
@@ -15,11 +15,10 @@ spec:
     middlewares:
     - name: {{ include "webbackend.fullname" . }}-middleware
     tls: {}
-  - routes:
   - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/webbackend/`)
     kind: Rule
     services:
     - name: {{ include "webbackend.fullname" . }}-service
       port: {{ .Values.service.port }}
     middlewares:
-    - name: {{ include "webbackend.fullname" . }}-middleware
+    - name: {{ include "webbackend.fullname" . }}-middleware``````````````````````
