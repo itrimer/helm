@@ -4,7 +4,6 @@ metadata:
   name: {{ include "web.fullname" . }}-ingressroutebar
 spec:
   entryPoints:
-    - websecure
     - web
   routes:
   - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`)
@@ -12,4 +11,3 @@ spec:
     services:
     - name: {{ include "web.fullname" . }}-service
       port: {{ .Values.service.port }}
-  tls: {}

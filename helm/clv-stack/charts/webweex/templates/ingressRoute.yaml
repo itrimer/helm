@@ -4,7 +4,6 @@ metadata:
   name: {{ include "webweex.fullname" . }}-ingressroutebar
 spec:
   entryPoints:
-    - websecure
     - web
   routes:
   - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && (PathPrefix(`/app/html`) || PathPrefix(`/app/weex`))
@@ -14,4 +13,3 @@ spec:
       port: {{ .Values.service.port }}
     middlewares:
     - name: {{ include "webweex.fullname" . }}-middleware
-  tls: {}

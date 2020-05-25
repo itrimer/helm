@@ -4,7 +4,6 @@ metadata:
   name: {{ include "webclvpg.fullname" . }}-ingressroutebar
 spec:
   entryPoints:
-    - websecure
     - web
   routes:
   - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/clvpg`)
@@ -14,4 +13,3 @@ spec:
       port: {{ .Values.service.port }}
     middlewares:
     - name: {{ include "webclvpg.fullname" . }}-middleware
-  tls: {}

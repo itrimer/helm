@@ -4,7 +4,6 @@ metadata:
   name: {{ include "datasync-web.fullname" . }}-ingressroutebar
 spec:
   entryPoints:
-    - websecure
     - web
   routes:
   - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/datasync/`)
@@ -12,4 +11,3 @@ spec:
     services:
     - name: {{ include "datasync-web.fullname" . }}-service
       port: 8080
-  tls: {}
