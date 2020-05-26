@@ -4,7 +4,6 @@ metadata:
   name: {{ include "webbackend.fullname" . }}-ingressroutebar
 spec:
   entryPoints:
-    - websecure
     - web
   routes:
     - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/webbackend/`)
@@ -14,7 +13,16 @@ spec:
           port: {{ .Values.service.port }}
       middlewares:
         - name: {{ include "webbackend.fullname" . }}-middleware
-      tls: {}
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ include "webbackend.fullname" . }}-ingressroutebar
+spec:
+  entryPoints:
+    - websecure
+  routes:
     - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/webbackend/`)
       kind: Rule
       services:
@@ -22,3 +30,4 @@ spec:
           port: {{ .Values.service.port }}
       middlewares:
         - name: {{ include "webbackend.fullname" . }}-middleware
+    tls: {}
