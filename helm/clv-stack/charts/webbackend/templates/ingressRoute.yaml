@@ -1,21 +1,3 @@
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: {{ include "webbackend.fullname" . }}-ingressroutebar
-spec:
-  entryPoints:
-    - websecure
-  routes:
-  - match: Host(`{{if not .Values.global.product }}{{ .Release.Name }}.{{end}}{{  .Values.global.root_domain }}`) && PathPrefix(`/webbackend/`)
-    kind: Rule
-    services:
-    - name: {{ include "webbackend.fullname" . }}-service
-      port: {{ .Values.service.port }}
-    middlewares:
-    - name: {{ include "webbackend.fullname" . }}-middleware
-  tls: {}
----
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
