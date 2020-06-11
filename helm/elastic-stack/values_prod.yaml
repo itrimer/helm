@@ -228,13 +228,13 @@ logstash:
       output {
         if [@metadata][file_type] == "access_log" {
           elasticsearch {
-            hosts => ["${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}"]
+            hosts => ["elk-elasticsearch-client.default.svc.cluster.local:9200"]
             index => "%{[@metadata][env]}_access_%{app_name}_%{+YYYY.MM.dd}"
             document_type => "%{[@metadata][type]}"
           }
         } else if [@metadata][file_type] == "java_log" {
           elasticsearch {
-            hosts => ["${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}"]
+            hosts => ["elk-elasticsearch-client.default.svc.cluster.local:9200"]
             index => "%{[@metadata][env]}_%{app_name}_%{+YYYY.MM.dd}"
             document_type => "%{[@metadata][type]}"
           }
@@ -245,7 +245,7 @@ logstash:
       output {
         if [index] == "car_model_prod" {
           elasticsearch {
-            hosts => ["${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}"]
+            hosts => ["elk-elasticsearch-client.default.svc.cluster.local:9200"]
             index => "%{index}"
             document_id => "%{modelUkid}"
             template => "/usr/share/logstash/data/last_run/car_model.json"
@@ -258,7 +258,7 @@ logstash:
       output {
         if [index] == "im_abstract_object_prod" {
           elasticsearch {
-            hosts => ["${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}"]
+            hosts => ["elk-elasticsearch-client.default.svc.cluster.local:9200"]
             index => "%{index}"
             document_id => "%{abstractObjectUkid}"
             template => "/usr/share/logstash/data/last_run/im_abstract_object_template.json"
@@ -271,7 +271,7 @@ logstash:
       output {
         if [index] == "rs_defined_prod" {
           elasticsearch {
-            hosts => ["${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}"]
+            hosts => ["elk-elasticsearch-client.default.svc.cluster.local:9200"]
             index => "%{index}"
             document_id => "%{definedUkid}"
             template => "/usr/share/logstash/data/last_run/rs_defined_template.json"
