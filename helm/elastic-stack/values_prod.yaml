@@ -24,12 +24,12 @@ elasticsearch:
 kibana:
   enabled: true
   env:
-    ELASTICSEARCH_HOSTS: http://{{ .Release.Name }}-elasticsearch-client:9200
+    ELASTICSEARCH_HOSTS: http://{{ .Release.Name }}-elasticsearch-client.default.svc.cluster.local:9200
 
 logstash:
   enabled: true
   elasticsearch:
-     host: http://{{ .Release.Name }}-elasticsearch-client
+     host: http://{{ .Release.Name }}-elasticsearch-client.default.svc.cluster.local:9200
   persistence:
     enabled: true
     storageClass: "local-storage"
