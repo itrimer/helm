@@ -51,8 +51,8 @@ deployment:
   annotations: {}
 
 service:
-  type: ClusterIP
-  clusterIP: "None"
+#  type: ClusterIP
+  clusterIP: None
   # portName: kibana-svc
   externalPort: 443
   internalPort: 5601
