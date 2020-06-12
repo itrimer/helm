@@ -14,6 +14,7 @@ metadata:
 {{- end }}
 
 spec:
+  clusterIP: None
   ports:
     - name: http
       port: 9200
@@ -30,7 +31,7 @@ spec:
     app: {{ template "elasticsearch.name" . }}
     component: "{{ .Values.client.name }}"
     release: {{ .Release.Name }}
-  type: {{ .Values.client.serviceType }}
+#  type: {{ .Values.client.serviceType }}
 {{- if .Values.client.loadBalancerIP }}
   loadBalancerIP: "{{ .Values.client.loadBalancerIP }}"
 {{- end }}
