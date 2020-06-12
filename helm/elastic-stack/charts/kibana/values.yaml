@@ -52,7 +52,7 @@ deployment:
 
 service:
   type: ClusterIP
-  # clusterIP: None
+  clusterIP: None
   # portName: kibana-svc
   externalPort: 443
   internalPort: 5601
