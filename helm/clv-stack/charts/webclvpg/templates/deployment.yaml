@@ -19,6 +19,10 @@ spec:
         app.kubernetes.io/name: {{ include "webclvpg.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      hostAliases:
+        - ip: 192.168.202.44
+          hostnames:
+            - "iot.sanyangma.com"
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
