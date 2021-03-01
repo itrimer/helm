@@ -30,7 +30,7 @@ carstore-biz:
   enabled: true
   image:
     repository:  habor.clvpg.com:8082/clv/carstore-biz
-    tag: dev3-41
+    tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
 
