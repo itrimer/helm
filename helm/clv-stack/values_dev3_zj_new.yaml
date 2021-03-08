@@ -17,7 +17,7 @@ global:
 gateway-web:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/gateway-web
+    repository:  habor.clvpg.com/clv/gateway-web
     # 代码的版本，一般以v1 .4.4-build_number 方式来标识。
     tag: dev3-latest
   ingress:
@@ -29,7 +29,7 @@ gateway-web:
 carstore-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/carstore-biz
+    repository:  habor.clvpg.com/clv/carstore-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -38,7 +38,7 @@ carstore-biz:
 hardwarecenter-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/hardwarecenter-biz
+    repository:  habor.clvpg.com/clv/hardwarecenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -47,7 +47,7 @@ hardwarecenter-biz:
 commonindustry-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/commonindustry-biz
+    repository:  habor.clvpg.com/clv/commonindustry-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -58,7 +58,7 @@ commonindustry-biz:
 usercenter-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/usercenter-biz
+    repository:  habor.clvpg.com/clv/usercenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -68,7 +68,7 @@ usercenter-biz:
 resourcecenter-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/resourcecenter-biz
+    repository:  habor.clvpg.com/clv/resourcecenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -78,7 +78,7 @@ resourcecenter-biz:
 contractcenter-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/contractcenter-biz
+    repository:  habor.clvpg.com/clv/contractcenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -88,7 +88,7 @@ contractcenter-biz:
 datasync-web:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/datasync-web
+    repository:  habor.clvpg.com/clv/datasync-web
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -97,7 +97,7 @@ datasync-web:
 datasync-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/datasync-biz
+    repository:  habor.clvpg.com/clv/datasync-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -108,7 +108,7 @@ datasync-biz:
 accountingcenter-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/accountingcenter-biz
+    repository:  habor.clvpg.com/clv/accountingcenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -117,7 +117,7 @@ accountingcenter-biz:
 taskcenter-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/taskcenter-biz
+    repository:  habor.clvpg.com/clv/taskcenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -126,7 +126,7 @@ taskcenter-biz:
 gw-midstage-web:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/gw-midstage-web
+    repository:  habor.clvpg.com/clv/gw-midstage-web
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -134,7 +134,7 @@ gw-midstage-web:
 gw-midstage-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/gw-midstage-biz
+    repository:  habor.clvpg.com/clv/gw-midstage-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss1
@@ -143,14 +143,14 @@ gw-midstage-biz:
 openapi-web:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/openapi-web
+    repository:  habor.clvpg.com/clv/openapi-web
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
 openapi-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/openapi-biz
+    repository:  habor.clvpg.com/clv/openapi-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -158,7 +158,7 @@ openapi-biz:
 push-jar:
   enabled: false
   image:
-    repository:  habor.clvpg.com:8082/clv/push-jar
+    repository:  habor.clvpg.com/clv/push-jar
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -167,7 +167,7 @@ push-jar:
 messagedispatch-biz:
   enabled: false
   image:
-    repository:  habor.clvpg.com:8082/clv/messagedispatch-biz
+    repository:  habor.clvpg.com/clv/messagedispatch-biz
     tag: dev3-latest
   env:
     netty.port: 7788
@@ -181,7 +181,7 @@ messagedispatch-biz:
 channelcenter-biz:
   enabled: false
   image:
-    repository:  habor.clvpg.com:8082/clv/channelcenter-biz
+    repository:  habor.clvpg.com/clv/channelcenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -189,7 +189,7 @@ channelcenter-biz:
 rulecenter-web:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/rulecenter-web
+    repository:  habor.clvpg.com/clv/rulecenter-web
     tag: dev3-latest
 
   nodeSelector:
@@ -198,7 +198,7 @@ rulecenter-web:
 rulecenter-biz:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/rulecenter-biz
+    repository:  habor.clvpg.com/clv/rulecenter-biz
     tag: dev3-latest
 
   nodeSelector:
@@ -207,7 +207,7 @@ rulecenter-biz:
 searchcenter-biz:
   enabled: false
   image:
-    repository:  habor.clvpg.com:8082/clv/searchcenter-biz
+    repository:  habor.clvpg.com/clv/searchcenter-biz
     tag: dev3-latest
 
   nodeSelector:
@@ -217,7 +217,7 @@ searchcenter-biz:
 supplychainbi-biz:
   enabled: false
   image:
-    repository:  habor.clvpg.com:8082/clv/supplychainbi-biz
+    repository:  habor.clvpg.com/clv/supplychainbi-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -226,7 +226,7 @@ supplychainbi-biz:
 targetcenter-biz:
   enabled: false
   image:
-    repository:  habor.clvpg.com:8082/clv/targetcenter-biz
+    repository:  habor.clvpg.com/clv/targetcenter-biz
     tag: dev3-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -235,7 +235,7 @@ targetcenter-biz:
 webbackend:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/webbackend
+    repository:  habor.clvpg.com/clv/webbackend
     tag: master-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -244,7 +244,7 @@ webbackend:
 web:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/web
+    repository:  habor.clvpg.com/clv/web
     tag: master-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -253,7 +253,7 @@ web:
 webmobile:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/webmobile
+    repository:  habor.clvpg.com/clv/webmobile
     tag: master-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -263,7 +263,7 @@ webmobile:
 webweex:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/webweex
+    repository:  habor.clvpg.com/clv/webweex
     tag: master-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -271,7 +271,7 @@ webweex:
 webclvpg:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/webclvpg
+    repository:  habor.clvpg.com/clv/webclvpg
     tag: master-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
@@ -279,7 +279,7 @@ webclvpg:
 webpgh5:
   enabled: true
   image:
-    repository:  habor.clvpg.com:8082/clv/webpgh5
+    repository:  habor.clvpg.com/clv/webpgh5
     tag: master-latest
   nodeSelector:
     kubernetes.io/hostname: k8ss2
